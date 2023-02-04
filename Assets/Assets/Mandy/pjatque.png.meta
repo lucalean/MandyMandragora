@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c78e5d6f93a60cd43a7c6f8413ff10db
+guid: 930cf9e6217af7f4393b0adfbfe61dda
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mandy_idle_test_0
+      name: pjatque_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 22
+        width: 19
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a076ee95b0117764db09a080986ef8c1
-      internalID: -876946527
+      spriteID: 7fa57ebee1a10ce4dbc702b0ae917939
+      internalID: -116202794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mandy_idle_test_1
+      name: pjatque_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 33
         y: 0
-        width: 16
-        height: 22
+        width: 22
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5e21e6f8b406de40abddcdb6f4a279e
-      internalID: -860802059
+      spriteID: 6443074df11ea5d4c8019f62abcc535e
+      internalID: -2040337881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mandy_idle_test_2
+      name: pjatque_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 66
         y: 0
-        width: 16
-        height: 22
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +173,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 880963b4052b8c645a21f74d654c7362
-      internalID: -1700479217
+      spriteID: c50524ec1a675624f8397d9db88de0b6
+      internalID: -1440850715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pjatque_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88d6b07b7910bc42a52bd6a7fa8718f
+      internalID: 2048230303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pjatque_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f53112db71477d46ab75b821d1464b3
+      internalID: 1989710725
       vertices: []
       indices: 
       edges: []
@@ -190,9 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mandy_idle_test_1: -860802059
-      mandy_idle_test_0: -876946527
-      mandy_idle_test_2: -1700479217
+      pjatque_1: -2040337881
+      pjatque_2: -1440850715
+      pjatque_4: 1989710725
+      pjatque_3: 2048230303
+      pjatque_0: -116202794
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
