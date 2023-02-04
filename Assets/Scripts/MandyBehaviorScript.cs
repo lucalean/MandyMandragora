@@ -9,6 +9,8 @@ public class MandyBehaviorScript : MonoBehaviour
 
     private float LastAttackTime;
 
+    private int Health = 2;
+
     //Parameters
     [SerializeField] private float Speed = 1f;
     [SerializeField] private float JumpStrength = 10f;
@@ -91,8 +93,10 @@ public class MandyBehaviorScript : MonoBehaviour
 
     private bool GetKeyAttack() => Input.GetKeyDown(KeyCode.J);
 
-    //private void OnTriggerEnter2D(Collision2D collision)
-    //{
-    //    Debug.Log("Colision Hitbox");
-    //}
+    public void Hit()
+    {
+        //Camera.main.GetComponent<AudioSource>().PlayOneShot(HurtSound);
+        Health -= 1;
+        if (Health == 0) Destroy(gameObject);
+    }
 }
