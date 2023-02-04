@@ -5,14 +5,22 @@ public class MandyBehaviorScript : MonoBehaviour
     private float Horizontal;
     private Rigidbody2D _rigidBody;
     private bool Grounded;
+    private Animator _animator;
+
+    private float LastAttackTime;
 
     //Parameters
     [SerializeField] private float Speed = 1f;
     [SerializeField] private float JumpStrength = 10f;
+    [SerializeField] private float AttackCooldown = 1f;
+    [SerializeField] private BoxCollider2D _attackHitBox;
 
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _attackHitBox = GetComponent<BoxCollider2D>();
+        _attackHitBox.enabled = false;
     }
 
     void Update()
@@ -23,11 +31,42 @@ public class MandyBehaviorScript : MonoBehaviour
 
         Grounded = IsTouchingFloor();
 
-        if (Input.GetKeyDown(KeyCode.W) && Grounded)
+        if (GetKeyJump() && Grounded)
         {
             Jump();
         }
+
+        if (GetKeyAttack() && CanAttack())
+        {
+            Attack();
+            //AfterAttack();
+        }
+        else
+        {
+        }
     }
+
+    private void FixedUpdate()
+    {
+        _rigidBody.velocity = new Vector2(Horizontal * Speed, _rigidBody.velocity.y);
+    }
+
+    private void Attack()
+    {
+        LastAttackTime = Time.time;
+        _attackHitBox.enabled = true;
+        _animator.SetTrigger("Attack");
+        Invoke("AfterAttack", AttackCooldown);
+
+    }
+
+    private void AfterAttack()
+    {
+        _attackHitBox.enabled = false;
+    }
+
+
+    private bool CanAttack() => Time.time > LastAttackTime + AttackCooldown;
 
     private void LookDirection()
     {
@@ -48,9 +87,12 @@ public class MandyBehaviorScript : MonoBehaviour
         _rigidBody.AddForce(Vector2.up * JumpStrength);
     }
 
-    private void FixedUpdate()
-    {
-        _rigidBody.velocity = new Vector2(Horizontal * Speed, _rigidBody.velocity.y);
-    }
+    private bool GetKeyJump() => Input.GetKeyDown(KeyCode.W);
 
+    private bool GetKeyAttack() => Input.GetKeyDown(KeyCode.J);
+
+    //private void OnTriggerEnter2D(Collision2D collision)
+    //{
+    //    Debug.Log("Colision Hitbox");
+    //}
 }
