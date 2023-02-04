@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e60cefb312b199b448dcce9ab6ea5be1
+guid: 930cf9e6217af7f4393b0adfbfe61dda
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,64 +117,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TestTile_0
+      name: pjatque_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 10
-        height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aca89e99ccec5704db6bd14cd18aee2d
-      internalID: 105201298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TestTile_1
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 0
-        width: 10
-        height: 16
+        width: 19
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7d8186a42f67864da941d85305ec6cf
-      internalID: 1303014413
+      spriteID: 7fa57ebee1a10ce4dbc702b0ae917939
+      internalID: -116202794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TestTile_2
+      name: pjatque_1
       rect:
         serializedVersion: 2
         x: 33
         y: 0
-        width: 10
-        height: 16
+        width: 22
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 698526b630b99924cb7db4a355936782
-      internalID: 489515988
+      spriteID: 6443074df11ea5d4c8019f62abcc535e
+      internalID: -2040337881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pjatque_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50524ec1a675624f8397d9db88de0b6
+      internalID: -1440850715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pjatque_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88d6b07b7910bc42a52bd6a7fa8718f
+      internalID: 2048230303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pjatque_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f53112db71477d46ab75b821d1464b3
+      internalID: 1989710725
       vertices: []
       indices: 
       edges: []
@@ -190,9 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TestTile_1: 1303014413
-      TestTile_0: 105201298
-      TestTile_2: 489515988
+      pjatque_1: -2040337881
+      pjatque_2: -1440850715
+      pjatque_4: 1989710725
+      pjatque_3: 2048230303
+      pjatque_0: -116202794
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
