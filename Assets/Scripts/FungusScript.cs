@@ -2,12 +2,20 @@ using UnityEngine;
 
 public class FungusScript : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collider)
+    private int Health = 1;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        MandyBehaviorScript mandy = collider.GetComponent<MandyBehaviorScript>();
+        Hit();
+    }
 
-        if (mandy != null) mandy.Hit();
-
-        //DestroyBullet();
+    public void Hit()
+    {
+        Health -= 1;
+        if (Health < 0)
+        {
+            Destroy(gameObject);
+            //TODO: Dropear algo
+        }
     }
 }
