@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private string MainMenu = "MainMenu";
 
     public void GoMainMenu() //Para exit o home
     {
