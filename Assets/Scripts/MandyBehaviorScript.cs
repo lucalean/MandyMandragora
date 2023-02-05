@@ -10,6 +10,9 @@ public class MandyBehaviorScript : MonoBehaviour
     private float LastAttackTime;
 
     private int Health = 2;
+    private bool dobleJump = true;
+    
+    private int jump = 0;
 
     //Parameters
     [SerializeField] private float Speed = 1f;
@@ -19,6 +22,7 @@ public class MandyBehaviorScript : MonoBehaviour
     [SerializeField] private AudioClip DeathSound;
     [SerializeField] private AudioClip JumpSound;
     [SerializeField] private AudioClip HitSound;
+    [SerializeField] private float MaxVelocityFall = 100f;
 
     void Start()
     {
@@ -30,15 +34,20 @@ public class MandyBehaviorScript : MonoBehaviour
 
     void Update()
     {
+        if (_rigidBody.velocity.y > MaxVelocityFall) _rigidBody.velocity = new Vector2(_rigidBody.velocity.x / 2, _rigidBody.velocity.y / 2);
+
         Horizontal = Input.GetAxisRaw("Horizontal");
 
         LookDirection();
 
         Grounded = IsTouchingFloor();
 
-        if (GetKeyJump() && Grounded)
+        if (GetKeyJump() && (Grounded || (jump == 1 && dobleJump)))
         {
             Jump();
+            jump += 1;
+        } else if( jump >= 2 && Grounded) {
+            jump = 0;
         }
 
         if (GetKeyAttack() && CanAttack())
@@ -89,7 +98,7 @@ public class MandyBehaviorScript : MonoBehaviour
 
     private void Jump()
     {
-        Camera.main.GetComponent<AudioSource>().PlayOneShot(DeathSound);
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(JumpSound);
         _rigidBody.AddForce(Vector2.up * JumpStrength);
     }
 

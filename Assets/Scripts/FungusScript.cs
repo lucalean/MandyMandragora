@@ -4,11 +4,10 @@ public class FungusScript : MonoBehaviour
 {
     private int Health = 1;
 
-    [SerializeField] private GameObject Heart;
+    [SerializeField] private GameObject PowerUp;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger");
         Hit();
     }
 
@@ -23,6 +22,6 @@ public class FungusScript : MonoBehaviour
     }
     private void OnDestroy()
     {
-        Instantiate(Heart, transform.position, Quaternion.identity);
+        Instantiate(PowerUp, transform.position, Quaternion.identity);
     }
 }
