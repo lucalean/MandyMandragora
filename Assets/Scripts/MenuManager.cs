@@ -9,6 +9,11 @@ public class MenuManager : MonoBehaviour
 
     public void GoMainMenu() //Para exit o home
     {
+        SceneManager.LoadScene(0);
+    }
+
+    public void GoToPlay() //Para exit o home
+    {
         SceneManager.LoadScene(1);
     }
 
