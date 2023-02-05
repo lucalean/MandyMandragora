@@ -9,7 +9,7 @@ public class MandyBehaviorScript : MonoBehaviour
 
     private float LastAttackTime;
 
-    private int Health = 10;
+    private int Health = 2;
 
     //Parameters
     [SerializeField] private float Speed = 1f;

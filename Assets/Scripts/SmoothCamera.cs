@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SmoothCamera : MonoBehaviour
@@ -13,6 +11,7 @@ public class SmoothCamera : MonoBehaviour
     // Start is called before the first frame update
     void FixedUpdate()
     {
+        if (target == null) return;
         Vector3 moveposition = target.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, moveposition, ref velocity, damping);
     }

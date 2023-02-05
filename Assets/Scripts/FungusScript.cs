@@ -4,8 +4,11 @@ public class FungusScript : MonoBehaviour
 {
     private int Health = 1;
 
+    [SerializeField] private GameObject Heart;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Trigger");
         Hit();
     }
 
@@ -17,5 +20,9 @@ public class FungusScript : MonoBehaviour
             Destroy(gameObject);
             //TODO: Dropear algo
         }
+    }
+    private void OnDestroy()
+    {
+        Instantiate(Heart, transform.position, Quaternion.identity);
     }
 }
