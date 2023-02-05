@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -915,7 +915,7 @@ TextureImporter:
     nameFileIdTable:
       tileset1_left_5: 1537967327
       tileset1_left_24: -1354338164
-      tileset1_left_22: -1067119933
+      tileset1_left_16: 760542606
       tileset1_left_8: -976876559
       tileset1_left_12: -1346650191
       tileset1_left_15: -1277463495
@@ -950,7 +950,7 @@ TextureImporter:
       tileset1_left_19: 783140032
       tileset1_left_20: -883841151
       tileset1_left_27: 1600324271
-      tileset1_left_16: 760542606
+      tileset1_left_22: -1067119933
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
