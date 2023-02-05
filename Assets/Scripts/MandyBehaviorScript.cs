@@ -10,6 +10,9 @@ public class MandyBehaviorScript : MonoBehaviour
     private float LastAttackTime;
 
     private int Health = 2;
+    private bool dobleJump = true;
+    
+    private int jump = 0;
 
     //Parameters
     [SerializeField] private float Speed = 1f;
@@ -39,9 +42,12 @@ public class MandyBehaviorScript : MonoBehaviour
 
         Grounded = IsTouchingFloor();
 
-        if (GetKeyJump() && Grounded)
+        if (GetKeyJump() && (Grounded || (jump == 1 && dobleJump)))
         {
             Jump();
+            jump += 1;
+        } else if( jump >= 2 && Grounded) {
+            jump = 0;
         }
 
         if (GetKeyAttack() && CanAttack())
