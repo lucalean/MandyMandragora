@@ -10,8 +10,8 @@ public class MandyBehaviorScript : MonoBehaviour
     private float LastAttackTime;
 
     private int Health = 2;
-    private bool dobleJump = true;
-    
+    private bool dobleJump = false;
+
     private int jump = 0;
 
     //Parameters
@@ -46,7 +46,9 @@ public class MandyBehaviorScript : MonoBehaviour
         {
             Jump();
             jump += 1;
-        } else if( jump >= 2 && Grounded) {
+        }
+        else if (jump >= 2 && Grounded)
+        {
             jump = 0;
         }
 
@@ -120,5 +122,9 @@ public class MandyBehaviorScript : MonoBehaviour
             Camera.main.GetComponent<AudioSource>().PlayOneShot(HitSound);
         }
 
+    }
+    public void EnableDoubleJump()
+    {
+        dobleJump = true;
     }
 }

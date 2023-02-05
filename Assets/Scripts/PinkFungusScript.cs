@@ -8,8 +8,7 @@ public class PinkFungusScript : MonoBehaviour
     {
         MandyBehaviorScript mandy = collider.GetComponent<MandyBehaviorScript>();
 
-        //DESCOMENTAR ESTA LINEAA en el merge
-        //if (mandy != null) mandy.EnableDoubleJump();
+        if (mandy != null) mandy.EnableDoubleJump();
 
     }
 }
