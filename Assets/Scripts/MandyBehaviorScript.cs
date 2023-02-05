@@ -9,11 +9,16 @@ public class MandyBehaviorScript : MonoBehaviour
 
     private float LastAttackTime;
 
+    private int Health = 2;
+
     //Parameters
     [SerializeField] private float Speed = 1f;
     [SerializeField] private float JumpStrength = 10f;
     [SerializeField] private float AttackCooldown = 1f;
     [SerializeField] private BoxCollider2D _attackHitBox;
+    [SerializeField] private AudioClip DeathSound;
+    [SerializeField] private AudioClip JumpSound;
+    [SerializeField] private AudioClip HitSound;
 
     void Start()
     {
@@ -84,6 +89,7 @@ public class MandyBehaviorScript : MonoBehaviour
 
     private void Jump()
     {
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(DeathSound);
         _rigidBody.AddForce(Vector2.up * JumpStrength);
     }
 
@@ -91,8 +97,19 @@ public class MandyBehaviorScript : MonoBehaviour
 
     private bool GetKeyAttack() => Input.GetKeyDown(KeyCode.J);
 
-    //private void OnTriggerEnter2D(Collision2D collision)
-    //{
-    //    Debug.Log("Colision Hitbox");
-    //}
+    public void Hit(int damage)
+    {
+        Health -= damage;
+
+        if (Health <= 0)
+        {
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(DeathSound);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(HitSound);
+        }
+
+    }
 }
