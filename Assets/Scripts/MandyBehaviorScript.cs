@@ -123,7 +123,6 @@ public class MandyBehaviorScript : MonoBehaviour
         }
 
     }
-
     public void EnableDoubleJump()
     {
         dobleJump = true;
