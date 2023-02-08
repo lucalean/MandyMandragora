@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 150419601}
   - component: {fileID: 150419603}
   - component: {fileID: 150419602}
+  - component: {fileID: 150419604}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -199,6 +200,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150419600}
   m_CullTransparentMesh: 1
+--- !u!95 &150419604
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150419600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d87db29610efcb24e955eab6aac4b03e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &212615712
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad3cd5ea337c874fb6e769bc5dd184f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenu: MainMenu
   pauseMenu: {fileID: 0}
 --- !u!4 &212615714
 Transform:
@@ -409,6 +429,7 @@ GameObject:
   - component: {fileID: 1859098574}
   - component: {fileID: 1859098573}
   - component: {fileID: 1859098572}
+  - component: {fileID: 1859098575}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -530,6 +551,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859098570}
   m_CullTransparentMesh: 1
+--- !u!95 &1859098575
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859098570}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 372db5e0a8bb6a64e9a247495cac59f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1875900515
 GameObject:
   m_ObjectHideFlags: 0
