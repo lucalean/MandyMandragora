@@ -159,12 +159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
-  JumpStrength: 150
+  JumpStrength: 100
   AttackCooldown: 0.4
   _attackHitBox: {fileID: 7703226759602095364}
-  DeathSound: {fileID: 0}
-  JumpSound: {fileID: 0}
-  HitSound: {fileID: 0}
 --- !u!61 &7703226759602095364
 BoxCollider2D:
   m_ObjectHideFlags: 0
